@@ -1,0 +1,200 @@
+/**
+ * Main layout
+ */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;  /* be as high as it's parent */
+  font-family: Arial, Verdana, sans-serif; /*"Courier New", serif;*/
+  font-size: 13px;
+  color: #333;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+input[type] {
+  padding: 0 7px;
+  line-height: 25px;
+}
+
+#sidebar {
+  min-height: 100%;
+  background: #282a2d;
+  width: 30%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 2px solid #999;
+  box-sizing: border-box;
+  padding: 60px 0 20px;
+}
+
+#content {
+  height: 100%;
+  width: 70%;
+  background: #efefef;
+  position: absolute;
+  left: 30%;
+  top: 0;
+  padding: 60px 20px 20px;
+  box-sizing: border-box;
+}
+
+#writer {
+  height: 100%;
+  width: 80%;
+  background: #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* for absolute save button */
+  overflow: auto;
+}
+
+#writer-edit {
+  height: 100%;
+  width: 100%;
+  background: #c6c6c6;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+
+    -webkit-transition: height 0.1s;
+    -moz-transition: height 0.1s;
+}
+
+.tag {
+  color: #aaa;
+}
+
+/**
+ * Additional styling
+ */
+
+/* display */
+.hide {
+  display: none !important;
+}
+
+/* indentation */
+.indent {
+  display: inline-block;
+  width: 10px;
+}
+
+/* spacers */
+.block {
+  display: block;
+  margin: 0 0 20px;
+}
+
+
+/* buttons */
+[class^=btn] {
+  display: inline-block;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #777;
+}
+
+[class^=btn]:hover {
+  cursor: pointer;
+}
+
+.btn-action {
+  background: #202428;
+  color: #777;
+  padding: 0 20px;
+}
+
+.btn-action:hover {
+  color: #b2382d;
+  border-color: #b2382d;
+}
+
+
+/* titles */
+[class^=title] {
+  display: block;
+}
+
+.title-1 {
+  font-size: 30px;
+  font-style: italic;
+  font-family: "Courier New", sans-serif;
+  margin: 0 0 20px;
+}
+
+.title-2 {
+  font-size: 20px;
+}
+
+.title-3 {
+  font-size: 16px;
+}
+
+#writer [class^=title] {
+  margin: 30px 0 15px;
+}
+
+
+/**
+ * Components
+ */
+
+/* sidebar */
+#sidebar .title-1 {
+  color: #999;
+  padding: 20px;
+}
+
+
+/* subject list */
+#list-subjects {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+#list-subjects a {
+  display: block;
+  padding: 0 20px;
+  line-height: 40px;
+  background: #202428;
+  color: #bbb;
+}
+
+#list-subjects .active a {
+  background: #282a2d;
+  color: #fff;
+}
+
+#list-subjects li {
+  border-bottom: 1px solid #333;
+}
+
+#list-subjects li:first-child {
+  border-top: 1px solid #333;
+}
+
+/* subject addition form */
+#subject-form {
+  margin: 20px;
+}
+
+#writer button[name=save] {
+  position: absolute;
+  right: 0px;
+  top: -40px;
+}

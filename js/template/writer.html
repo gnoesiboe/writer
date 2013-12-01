@@ -1,0 +1,8 @@
+<div id="writer">
+  <button name="save" class="btn-action hide" type="button" >save</button>
+  <h1 class="title-1"><%= subject.get('title') %></h1>
+  <textarea id="writer-edit" class="hide" placeholder="@todo write away.." name="writer"><%= subject.get('text') %></textarea>
+  <div id="writer-detail">
+    <%= subject.getRenderedText() %>
+  </div>
+</div>
